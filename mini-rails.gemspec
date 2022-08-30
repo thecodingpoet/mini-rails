@@ -1,8 +1,6 @@
-require_relative 'lib/mini/rails/version'
-
 Gem::Specification.new do |spec|
   spec.name          = "mini-rails"
-  spec.version       = Mini::Rails::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Tomi Duyile"]
   spec.email         = ["thecodingpoet@gmail.com"]
 
@@ -25,4 +23,6 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_development_dependency "sqlite3"
 end
