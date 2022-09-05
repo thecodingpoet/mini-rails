@@ -1,12 +1,5 @@
-require "active_record"
-require "active_support"
-
 RSpec.describe ActiveSupport do
   describe ".search_for_file" do 
-    before(:each) do
-      ActiveSupport::Dependencies.autoload_paths = Dir["#{__dir__}/muffin_blog/app/*"]
-    end
-
     it "works" do 
       file = ActiveSupport::Dependencies.search_for_file("application_controller")
       expect(file).to eq("#{__dir__}/muffin_blog/app/controllers/application_controller.rb")

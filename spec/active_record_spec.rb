@@ -1,12 +1,4 @@
-require "active_record"
-require "active_support"
-
 RSpec.describe ActiveRecord do
-  before(:each) do 
-    ActiveSupport::Dependencies.autoload_paths = Dir["#{__dir__}/muffin_blog/app/*"]
-    Post.establish_connection(database: "#{__dir__}/muffin_blog/db/development.sqlite3")
-  end 
-
   it "executes sql" do
     rows = Post.connection.execute("SELECT * FROM posts")
     expect(rows).to be_kind_of(Array)
