@@ -12,7 +12,7 @@ RSpec.describe ActionController do
         response << "show"
       end
   
-      def redirect 
+      def redirect
         redirect_to "/"
       end
   
@@ -50,7 +50,6 @@ RSpec.describe ActionController do
       end
     end
 
-    
     describe "#redirect" do
       class Response
         attr_accessor :status, :location, :body
